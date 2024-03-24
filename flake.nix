@@ -2,10 +2,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-    gitignore = {
-      url = "github:hercules-ci/gitignore.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     sst-mac-arm64 = {
       url = "file+https://github.com/sst/ion/releases/latest/download/sst-mac-arm64.tar.gz";
       flake = false;
@@ -28,7 +24,6 @@
     self,
     nixpkgs,
     flake-utils,
-    gitignore,
     sst-mac-arm64,
     sst-mac-x86_64,
     sst-linux-arm64,
@@ -50,7 +45,7 @@
       app = pkgs.stdenv.mkDerivation {
         name = "sst";
         version = "0.1.0";
-        src = gitignore.lib.gitignoreSource ./.;
+        src = ./.;
         buildInputs = [];
         buildPhase = ''
           runHook preBuild
