@@ -2,8 +2,14 @@
 
 Get a shell with [SST ion](https://github.com/sst/ion):
 
-```
+```sh
 $ nix shell github:sellooh/sst-flake -c $SHELL
+```
+
+Install in your nix profile:
+
+```sh
+$ nix profile install github:sellooh/sst-flake
 ```
 
 Make your own flake, you can use this as a starting point:
