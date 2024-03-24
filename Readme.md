@@ -1,20 +1,21 @@
 # Usage
 
-Get a shell with [SST ion](https://github.com/sst/ion):
+#### Get a shell with [SST ion](https://github.com/sst/ion)
 
 ```sh
 $ nix shell github:sellooh/sst-flake -c $SHELL
 ```
 
-Install in your nix profile:
+#### Install in your nix profile
 
 ```sh
 $ nix profile install github:sellooh/sst-flake
 ```
 
-Make your own flake, you can use this as a starting point:
+#### Use in your own flake (recommended)
 
-Example:
+You can use this as a starting point:
+
 ```nix
 {
   inputs = {
@@ -56,6 +57,7 @@ Example:
 
           # SST
           sst
+          unzip # Required by sst, to install bun
 
           # Node
           nodejs-18_x
