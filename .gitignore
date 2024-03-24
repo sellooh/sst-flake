@@ -1,0 +1,7 @@
+
+# Nix
+result
+
+# Environment
+.direnv
+.env
