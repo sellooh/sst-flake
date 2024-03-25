@@ -1,4 +1,4 @@
-name: (ad-hoc) Check for New Releases
+name: Check for New Releases (ad-hoc)
 
 on: workflow_dispatch
 
@@ -19,12 +19,12 @@ jobs:
           PREVIOUS_RELEASE=$(cat .last_release || echo "")
           if [[ "$LATEST_RELEASE" != "$PREVIOUS_RELEASE" ]]; then
             echo "New release detected: $LATEST_RELEASE"
-            echo "::set-output name=new_release::true"
-            echo "::set-output name=latest_release::$LATEST_RELEASE"
+            echo "new_release=true" >> $GITHUB_OUTPUT
+            echo "latest_release=$LATEST_RELEASE" >> $GITHUB_ENV
             echo $LATEST_RELEASE > .last_release
           else
             echo "No new release detected."
-            echo "::set-output name=new_release::false"
+            echo "new_release=false" >> $GITHUB_OUTPUT
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -43,7 +43,7 @@ jobs:
 
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-          git commit -am "Update last_release to ${{ steps.check_release.outputs.latest_release }}"
+          git commit -am "Update last_release to ${{ env.latest_release }}"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
