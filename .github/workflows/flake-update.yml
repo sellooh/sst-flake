@@ -1,0 +1,49 @@
+name: Check for New Releases
+
+on:
+  schedule:
+    # Runs every 10 minutes
+    - cron: "*/10 * * * *"
+
+jobs:
+  check-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - uses: cachix/install-nix-action@v25
+        with:
+            github_access_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check for new release
+        id: check_release
+        run: |
+          # Example using jq and curl to check for new releases
+          LATEST_RELEASE=$(curl -s https://api.github.com/repos/sst/ion/releases/latest | jq -r ".tag_name")
+          echo "Latest release is $LATEST_RELEASE"
+          # Compare with previously stored release
+          PREVIOUS_RELEASE=$(cat .last_release)
+          if [[ "$LATEST_RELEASE" != "$PREVIOUS_RELEASE" ]]; then
+            echo "New release detected: $LATEST_RELEASE"
+            echo "::set-output name=new_release::true"
+            echo $LATEST_RELEASE > .last_release
+            git config --global user.email "action@github.com"
+            git config --global user.name "GitHub Action"
+
+            # update nix flake
+            nix flake update
+
+            git commit -am "Update last_release to $LATEST_RELEASE"
+            git push
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Trigger your workflow
+        if: steps.check_release.outputs.new_release == 'true'
+        run: |
+          echo "A new release was detected, triggering workflow..."
+          # Add steps or scripts to trigger your specific workflow actions
+
+          name: "Test"
