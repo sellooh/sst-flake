@@ -25,6 +25,7 @@ jobs:
           else
             echo "No new release detected."
             echo "::set-output name=new_release::false"
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
