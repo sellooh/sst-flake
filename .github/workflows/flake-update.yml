@@ -1,9 +1,9 @@
 name: Check for New Releases
 
-on:
-  schedule:
+on: workflow_dispatch
+#   schedule:
     # Runs every 10 minutes
-    - cron: "*/10 * * * *"
+    # - cron: "*/10 * * * *"
 
 jobs:
   check-release:
