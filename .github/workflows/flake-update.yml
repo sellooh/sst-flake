@@ -1,9 +1,9 @@
 name: Check for New Releases
 
-on: workflow_dispatch
-#   schedule:
+on:
+   schedule:
     # Runs every 10 minutes
-    # - cron: "*/10 * * * *"
+      - cron: "*/10 * * * *"
 
 jobs:
   check-release:
@@ -40,10 +40,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Trigger your workflow
-        if: steps.check_release.outputs.new_release == 'true'
-        run: |
-          echo "A new release was detected, triggering workflow..."
-          # Add steps or scripts to trigger your specific workflow actions
-
-          name: "Test"
