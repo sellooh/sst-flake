@@ -47,7 +47,7 @@
     "sst-linux-arm64": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-vFTCdBi/q1DPe1w7tFdtS0U/13YfYGM7TjoSQQuF1bM=",
+        "narHash": "sha256-Q+fbjKl+tWRzFiSxdJir7659gzBhpREJSwAQuxdlars=",
         "type": "file",
         "url": "https://github.com/sst/ion/releases/latest/download/sst-linux-arm64.tar.gz"
       },
@@ -59,7 +59,7 @@
     "sst-linux-x86_64": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-k+7quhTisvrAVR618ou80XyGMWfLBxpvpqx2cUstYEU=",
+        "narHash": "sha256-XvRRE6ZtOkOd9MJhChxWUuBHSYD7jOZPAHXepF4ju/A=",
         "type": "file",
         "url": "https://github.com/sst/ion/releases/latest/download/sst-linux-x86_64.tar.gz"
       },
@@ -71,7 +71,7 @@
     "sst-mac-arm64": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-1Iz8T5oRvLbJq918wh5ijCDk3O2oI86MoO5+orYzwuo=",
+        "narHash": "sha256-p34poq5gceSafqyrA4SJCFZLEK8p8csJ0lUb77At03A=",
         "type": "file",
         "url": "https://github.com/sst/ion/releases/latest/download/sst-mac-arm64.tar.gz"
       },
@@ -83,7 +83,7 @@
     "sst-mac-x86_64": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-vw7LbOEc4CVJEDAe2/dLLDOUzC1iFaiTLk6MfyKgu2k=",
+        "narHash": "sha256-FJWwm2xKJTPo9BA3q7svC+hIvE997OHC2slwv9o5TA8=",
         "type": "file",
         "url": "https://github.com/sst/ion/releases/latest/download/sst-mac-x86_64.tar.gz"
       },
