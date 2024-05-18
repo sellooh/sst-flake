@@ -20,11 +20,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1715447595,
-        "narHash": "sha256-VsVAUQOj/cS1LCOmMjAGeRksXIAdPnFIjCQ0XLkCsT0=",
+        "lastModified": 1715787315,
+        "narHash": "sha256-cYApT0NXJfqBkKcci7D9Kr4CBYZKOQKDYA23q8XNuWg=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "062ca2a9370a27a35c524dc82d540e6e9824b652",
+        "rev": "33d1e753c82ffc557b4a585c77de43d4c922ebb5",
         "type": "github"
       },
       "original": {
@@ -47,7 +47,7 @@
     "sst-linux-arm64": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-f8etZFCF73KeZMZcdNm4jKsQXKIKPxcbzuqJXvIQw50=",
+        "narHash": "sha256-vcmsFxVzyD3jAqEWHirD/lO7pacgHH2yo1xEE8hxajc=",
         "type": "file",
         "url": "https://github.com/sst/ion/releases/latest/download/sst-linux-arm64.tar.gz"
       },
@@ -59,7 +59,7 @@
     "sst-linux-x86_64": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-BSc9HhhvcjZO2U/8ZZBTPBzvuIVWulSDMMD+o/3+hwg=",
+        "narHash": "sha256-ELX36/q43U217319nshWHF+DIlpgSnaTmmK+yAJu+ps=",
         "type": "file",
         "url": "https://github.com/sst/ion/releases/latest/download/sst-linux-x86_64.tar.gz"
       },
@@ -71,7 +71,7 @@
     "sst-mac-arm64": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-FYwSateYx3cc930NNhVEiw+8yWA7SOVtIvR0Zpe/Y9Q=",
+        "narHash": "sha256-D29tl0E3ab1Q1ezODMvE08xoaa3XqdJy2glYa7gn5NQ=",
         "type": "file",
         "url": "https://github.com/sst/ion/releases/latest/download/sst-mac-arm64.tar.gz"
       },
@@ -83,7 +83,7 @@
     "sst-mac-x86_64": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-Z7uMzvxrrohIjoRBDM12/PK61+wqNSuxGAOuBjLskLs=",
+        "narHash": "sha256-s2lrfw8aDsbZ9pcJwfkcdYtxuTW0Lo2Bwa9hfLcsv6Q=",
         "type": "file",
         "url": "https://github.com/sst/ion/releases/latest/download/sst-mac-x86_64.tar.gz"
       },
