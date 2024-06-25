@@ -47,7 +47,7 @@
     "sst-linux-arm64": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-uG2/9Jx695kewxuJSKYcVFY54/OT4sUqsBNXSxUMjc4=",
+        "narHash": "sha256-qcEUQQpxP7CsdOZlYba9xe9qw8VhnmPQayuE9OnEj5c=",
         "type": "file",
         "url": "https://github.com/sst/ion/releases/latest/download/sst-linux-arm64.tar.gz"
       },
